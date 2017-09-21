@@ -9,7 +9,7 @@ module.exports = {
      //Action losrque l'utilisateur personalise son filtre emploi dans la parametre
     modifierFiltre: function(req, res){
         var idUtilisateur = req.param('id');
-        Utilisateurs.findOne(idUtilisateur).exec(function(err, utilisateur){
+        Utilisateurs.findOne({idUtilisateur:idUtilisateur}).exec(function(err, utilisateur){
             var ville = req.param('ville');
             var domaine = req.param('domaine');
             var typeContrat = req.param('contrat');
