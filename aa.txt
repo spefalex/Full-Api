@@ -9,3 +9,6 @@ git log // voir les commits
 
 git branch //creation nouvelle branche afin de diverger le temp
  git checkout nombranch // pour travailler avec branch
+
+git diff master..SpexeBranch // voir la diff entre 2 branche
+git merge nombranch // raptriE les 2 branche, faut qu'on checkoout sur master
