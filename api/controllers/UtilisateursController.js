@@ -10,7 +10,7 @@ var smtpTransport = mailer.createTransport("SMTP",{
 
 module.exports = {
 /**
-* It will create a new userman .
+* It will create a new userman 
 */
 create: function (req, res) {
 res.header("Access-Control-Allow-Origin", "*");
