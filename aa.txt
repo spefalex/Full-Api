@@ -1,6 +1,8 @@
 Commande de base : 
-  git init
+  git init                            //les trois commande de base 
     git add .
  	git commit --message ""
 
 git diff //voir le changement
+
+git log // voir les commits
