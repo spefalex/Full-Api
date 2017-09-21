@@ -6,3 +6,6 @@ Commande de base :
 git diff //voir le changement
 
 git log // voir les commits
+
+git branch //creation nouvelle branche afin de diverger le temp
+ git checkout nombranch // pour travailler avec branch
