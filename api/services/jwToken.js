@@ -2,7 +2,7 @@ var
   jwt = require('jsonwebtoken'),
   tokenSecret = "secretissecet";
 
-// Generates a token from supplied payload
+// Génère un jeton à partir de la charge utile fournie
 module.exports.issue = function(payload) {
   return jwt.sign(
     payload,
