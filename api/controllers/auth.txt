@@ -1,0 +1,31 @@
+module.exports = {
+  index: function (req, res) {
+    var e_mail = req.param('e_mail');
+    var password = req.param('password');
+
+    if (!e_mail || !password) {
+      return res.json(401, {err: 'email et password vide'});
+    }
+
+    User.findOne({e_mail: e_mail}, function (err, user) {
+      if (!user) {
+        return res.json(401, {err: 'invalid email ou password'});
+      }
+
+      User.comparePassword(password, user, function (err, valid) {
+        if (err) {
+          return res.json(403, {err: 'interdit'});
+        }
+
+        if (!valid) {
+          return res.json(401, {err: 'invalid email ou password'});
+        } else {
+          res.json({
+             user: user.id,
+            token: jwToken.issue({message:'OK'})
+          });
+        }
+      });
+    })
+  }
+};

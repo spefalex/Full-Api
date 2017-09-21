@@ -1,0 +1,6 @@
+Commande de base : 
+  git init
+    git add .
+ 	git commit --message ""
+
+git diff //voir le changement
